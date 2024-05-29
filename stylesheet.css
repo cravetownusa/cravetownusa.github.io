@@ -9,7 +9,7 @@
   flex-direction: row;
 }
 
-.crave {
+.cave {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   border: 3px outset gainsboro;
   border-radius: 25%;
