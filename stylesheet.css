@@ -22,6 +22,12 @@
   color: orange;
 } 
 
+input {
+  width: 90vw;
+  height: 50vh;
+  border: none;
+}
+
 .crave {
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   border: 3px outset gainsboro;
