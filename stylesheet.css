@@ -14,9 +14,9 @@
 .cave {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   border: 3px outset gainsboro;
-  border-radius: 30px;
-  height: 3rem;
-  width: 3rem;
+  border-radius: 20px;
+  height: 5rem;
+  width: 5rem;
   padding: 1rem;
   background-color: lemonchiffon;
   color: orange;
@@ -25,9 +25,9 @@
 .crave {
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   border: 3px outset gainsboro;
-  border-radius: 30px;
-  height: 3rem;
-  width: 3rem;
+  border-radius: 20px;
+  height: 5rem;
+  width: 5rem;
   padding: 1rem;
   background-color: lemonchiffon;
   color: orange;
