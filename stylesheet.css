@@ -4,14 +4,23 @@
   color: white;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
 .crave {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   border: 3px outset gainsboro;
   border-radius: 25%;
+  height: 3rem;
+  padding: 1rem;
 } 
 
 .crave {
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   border: 3px outset gainsboro;
   border-radius: 25%;
+  height: 3rem;
+  padding: 1rem;
 } 
