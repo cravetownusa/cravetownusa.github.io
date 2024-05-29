@@ -8,7 +8,7 @@
                var now = new Date();
                return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
-                             .getSeconds()) : (now.getSeconds())) + "\n");
+                             .getSeconds()) : (now.getSeconds())));
         }
 </script>
     </script>
@@ -17,8 +17,8 @@
     <h1>Cravetown</h1>
         <form name="timeForm">
             <div class="buttons">
-                <button class="crave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Crave</button>
-                <button class="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
+                <button class="crave" type="button" onclick="this.form.timeField.value+=getTimeStamp()+"\n"">Crave</button>
+                <button class="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()+"\n"">Cave</button>
             </div>
             <br><br>
             <h3>Your Results</h3>
