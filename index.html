@@ -3,14 +3,26 @@
     <title>Cravetown, USA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script>
+        function getTimeStamp() {
+               var now = new Date();
+               return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
+                             + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
+                             .getSeconds()) : (now.getSeconds())));
+        }
+</script>
+    </script>
 </head>
 <body>
     <h1>Cravetown</h1>
     <div class="buttons">
-        <button class="crave">Crave</button>
-        <button class="cave">Cave</button>
+        <form>
+            <button class="crave" type="button" onclick="this.form.timeField.value=getTimeStamp()">Crave</button>
+            <button class="cave" type="button" onclick="this.form.timeField.value=getTimeStamp()">Cave</button>
+        </form>
     </div>
     <br><br>
     <h3>Your Results</h3>
     <p>Today: </p>
+    <input type="text" name="timeField" size="11">
 </body>
