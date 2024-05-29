@@ -15,14 +15,14 @@
 </head>
 <body>
     <h1>Cravetown</h1>
-    <div class="buttons">
-        <form name="getTimeStamp">
-            <button class="crave" type="button" onclick="this.form.timeField.value=getTimeStamp()">Crave</button>
-            <button class="cave" type="button" onclick="this.form.timeField.value=getTimeStamp()">Cave</button>
+        <form name="timeForm">
+            <div class="buttons">
+                <button class="crave" type="button" onclick="this.form.timeField.value=getTimeStamp()">Crave</button>
+                <button class="cave" type="button" onclick="this.form.timeField.value=getTimeStamp()">Cave</button>
+            </div>
+            <br><br>
+            <h3>Your Results</h3>
+            <p>Today: </p>
+            <input type="text" name="timeField" size="11">
         </form>
-    </div>
-    <br><br>
-    <h3>Your Results</h3>
-    <p>Today: </p>
-    <input type="text" name="timeField" size="11">
 </body>
