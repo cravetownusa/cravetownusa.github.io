@@ -13,7 +13,7 @@
 .cave {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   border: 3px outset gainsboro;
-  border-radius: 25%;
+  border-radius: 50%;
   height: 3rem;
   width: 3rem;
   padding: 1rem;
@@ -23,7 +23,7 @@
 .crave {
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   border: 3px outset gainsboro;
-  border-radius: 25%;
+  border-radius: 50%;
   height: 3rem;
   width: 3rem;
   padding: 1rem;
