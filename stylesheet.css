@@ -22,7 +22,7 @@
   color: orange;
 } 
 
-textarea {
+#textarea {
   width: 50vw;
   border: none;
 }
