@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        window.onload() = function() {
-            const prevText = localStorage.getItem("file");
+        function loadText() {
             const box = document.getElementById("results");
+            const prevText = localStorage.getItem("file");
             box.value = JSON.parse(prevText);
         }
         
@@ -56,6 +56,6 @@
         <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
         <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
         <p>Today: </p>
-        <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
+        <textarea name="timeField" onload="loadText()" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
     </form>
 </body>
