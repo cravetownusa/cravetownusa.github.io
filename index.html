@@ -5,8 +5,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
         function loadText() {
-            const box = document.getElementById("results");
             const prevText = localStorage.getItem("file");
+            const box = document.getElementById("results");
             box.value = JSON.parse(prevText);
         }
         
