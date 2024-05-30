@@ -8,18 +8,18 @@
         var const daily = document.getElementById("daily");
         
         function getTimeStamp() {
+                counter+=1;
                 var now = new Date();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
-                counter+=1;
-                daily.value = counter;
-        
+                
         }
         function printSuccess() {
                return ("Great job resisting!\n");
         }
-        
+
+        daily.value = counter;
     </script>
 </head>
 <body>
