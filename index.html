@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        window.localStorage.getItem(timeField.value);
+        const oldText = document.getElementById("results").value;
+        window.localStorage.getItem("results");
         
         function getTimeStamp() {
                 var now = new Date();
@@ -46,7 +47,8 @@
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
         <script>
-            window.localstorage.setItem(this.form.timeField.value);
+            const storedText = document.getElementById("results").value;
+            window.localStorage.setItem("results", storedText);
         </script>
     </form>
 </body>
