@@ -4,8 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        const prevText = localStorage.getItem("file");
-        document.form.timeField.value = prevText;
+        window.onload() {
+            const prevText = localStorage.getItem("file");
+            document.getElementById("results").value = prevText;
+        }
         
         function getTimeStamp() {
                 var now = new Date();
