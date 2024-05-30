@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        const prevText = localStorage.getItem("results");
+        const prevText = localStorage.getItem("file");
         document.form.timeField.value = prevText;
         
         function getTimeStamp() {
@@ -24,7 +24,7 @@
 
         function saveResults() {
             const savedText = document.getElementById("results").value;
-            localStorage.setItem("results", savedText);
+            localStorage.setItem("file", savedText);
         }
 
         var counter = 0;
