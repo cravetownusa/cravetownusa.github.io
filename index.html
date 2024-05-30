@@ -4,21 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
+        var counter = 0;
+        var const daily = document.getElementById("daily");
+        
         function getTimeStamp() {
-               var now = new Date();
-               return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
+                var now = new Date();
+                return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
+                counter+=1;
+                daily.value = counter;
+        
         }
         function printSuccess() {
                return ("Great job resisting!\n");
-        }
-
-        var counter = 0;
-        var const daily = document.getElementById("daily");
-        document.getElementById("crave").onclick = function plusOne() {
-            counter+=1;
-            daily.value = counter;
         }
         
     </script>
