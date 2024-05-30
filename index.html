@@ -14,7 +14,13 @@
                return ("Great job resisting!\n");
         }
 
+        var counter = 0;
+        document.getElementById("crave").onclick = function plusOne() {
+            counter+=1;
+            return counter;
+        }
         
+        document.getElementById("daily").innerText = counter;
 </script>
     </script>
 </head>
@@ -27,7 +33,7 @@
         </div>
         <br><br>
         <h3>Your Results</h3>
-        <p>Today: </p>
+        <p>Today: </p><h4 id="daily"></h4>
         <textarea name="timeField" id="results" rows="50" cols="1"></textarea>
     </form>
 </body>
