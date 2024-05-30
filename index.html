@@ -10,12 +10,11 @@
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
         }
+
         function printSuccess() {
                return ("Great job resisting!\n");
         }
-        var counter = 0;
-        var const daily = document.getElementById("daily");        
-        daily.value = counter;
+        
     </script>
 </head>
 <body>
@@ -27,7 +26,7 @@
         </div>
         <br><br>
         <h3>Your Results</h3>
-        <textarea type="text/html" id="daily" rows="1" cols="1" style="font-weight: bold;"></textarea>
+        <textarea name="dayCount" id="daily" rows="1" cols="1" style="font-weight: bold;"></textarea>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1"></textarea>
     </form>
