@@ -24,6 +24,7 @@
 
         function saveResults() {
             const savedText = document.getElementById("results").value;
+            savedText = JSON.stringify(savedText);
             localStorage.setItem("file", savedText);
         }
 
