@@ -10,19 +10,22 @@
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
         }
+        function printSuccess() {
+               return ("Great job resisting!");
+        }
 </script>
     </script>
 </head>
 <body>
     <h1>Cravetown</h1>
-        <form name="timeForm">
-            <div class="buttons">
-                <button class="crave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Crave</button>
-                <button class="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
-            </div>
-            <br><br>
-            <h3>Your Results</h3>
-            <p>Today: </p>
-            <textarea name="timeField" id="textarea" rows="50" cols="1"><textarea>
-        </form>
+    <form name="timeForm">
+        <div class="buttons">
+            <button class="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
+            <button class="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
+        </div>
+        <br><br>
+        <h3>Your Results</h3>
+        <p>Today: </p>
+        <textarea name="timeField" id="textarea" rows="50" cols="1"><textarea>
+    </form>
 </body>
