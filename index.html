@@ -16,9 +16,11 @@
         }
 
         var counter = 0;
-        if (getTimeStamp()) {
+        if (getTimeStamp() == true) {
                 counter+=1;
-                getElementById("daily").innerText = counter.value
+                const daily = document.getElementById("daily");
+                daily.value = " ";
+                daily.value = counter;       
         }
         
     </script>
