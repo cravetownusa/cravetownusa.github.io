@@ -22,6 +22,11 @@
                 return (" ");
         }
 
+        function saveResults() {
+            const savedText = document.getElementById("results").value;
+            window.localStorage.setItem("results", savedText);
+        }
+
         var counter = 0;
         if (getTimeStamp() === true) {
                 counter+=1;
@@ -48,11 +53,5 @@
         <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
-        <script>
-        function saveResults() {
-            const savedText = document.getElementById("results").value;
-            window.localStorage.setItem("results", savedText);
-        }
-        </script>
     </form>
 </body>
