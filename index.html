@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
+        window.localStorage.getItem(timeField.value);
+        
         function getTimeStamp() {
                 var now = new Date();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
@@ -13,6 +15,10 @@
 
         function printSuccess() {
                return ("Great job resisting!\n");
+        }
+
+        function clearText() {
+                return (" ");
         }
 
         var counter = 0;
@@ -27,8 +33,6 @@
 </head>
 <body>
     <h1>Cravetown</h1>
-    <image src="IMG_5009.gif" width="100px" height="100px" />
-    <br><br>
     <form name="timeForm">
         <div class="buttons">
             <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
@@ -37,7 +41,11 @@
         <br><br>
         <h3>Your Results</h3>
         <textarea name="dayCount" id="daily" rows="1" cols="1" style="font-weight: bold;">0</textarea>
+        <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
+        <script>
+            window.localstorage.setItem(this.form.timeField.value);
+        </script>
     </form>
 </body>
