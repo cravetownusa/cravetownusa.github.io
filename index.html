@@ -6,7 +6,7 @@
     <script>
         window.onload() = function() {
             const prevText = localStorage.getItem("file");
-            document.getElementById("results").value = prevText;
+            document.getElementById("results").value = JSON.parse(prevText);
         }
         
         function getTimeStamp() {
