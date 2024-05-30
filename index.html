@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        const oldText = document.getElementById("results").value;
-        window.localStorage.getItem("results");
+        const prevText = window.localStorage.getItem("results");
+        document.form.timeField.value = prevText;
         
         function getTimeStamp() {
                 var now = new Date();
@@ -45,11 +45,14 @@
         <h3>Your Results</h3>
         <textarea name="dayCount" id="daily" rows="1" cols="1" style="font-weight: bold;">0</textarea>
         <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
+        <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
         <script>
-            const storedText = document.getElementById("results").value;
-            window.localStorage.setItem("results", storedText);
+        function saveResults() {
+            const savedText = document.getElementById("results").value;
+            window.localStorage.setItem("results", savedText);
+        }
         </script>
     </form>
 </body>
