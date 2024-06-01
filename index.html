@@ -44,15 +44,10 @@
             <h3>Your Results</h3>
                 <script>
                     let counter = 0;
-                    let rawText = sessionStorage.getItem("file")
-                    for (let i = 0; i < rawText.length; i++) {
-                            if (rawText.charAt(i) === 'G') {
-                            counter+= 1;
-                            }
-                    }
+                    counter+=1;
                     document.getElementById("daily").innerHTML = JSON.stringify(counter);
                 </script>
-            <p id="daily">0</p>
+            <p id="daily"></p>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
             <p>Today: </p>
