@@ -6,7 +6,7 @@
     <script> 
         
         function loadText() {
-                document.getElementById("results").value = localStorage.getItem("file");
+                document.getElementById("results").value = JSON.parse(localStorage.getItem("file"));
         }
         window.onload = loadText();
         
