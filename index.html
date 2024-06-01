@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script> 
+        function loadText() {
+        var prevText = localStorage.getItem("file");
+        document.getElementById("results").value = prevText;
+        }
+        window.onload = loadText();
+        
         function getTimeStamp() {
                 var now = new Date();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
@@ -51,13 +57,5 @@
         <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
-        <script>
-            function loadText() {
-            var prevText = localStorage.getItem("file");
-            document.getElementById("results").value = prevText;
-            }
-            window.onload = loadText();
-            
-        </script>
     </form>
 </body>
