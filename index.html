@@ -4,12 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        function loadText() {
-            const prevText = localStorage.getItem("file");
-            var resultsArea = document.forms.timeField;
-            resultsArea.value = JSON.parse(prevText);
-            return resultsArea.value;
-        }
+        const prevText = localStorage.getItem("file");
+        document.forms.timeField.value = JSON.parse(prevText);
+
         
         function getTimeStamp() {
                 var now = new Date();
@@ -46,7 +43,7 @@
     <h1>Cravetown</h1>
     <image src="IMG_5009.gif" height="100px" width="100px" />
     <br><br><br>
-    <form name="timeForm" onload="loadText()">
+    <form name="timeForm">
         <div class="buttons">
             <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
             <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
