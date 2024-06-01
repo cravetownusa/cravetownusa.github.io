@@ -55,7 +55,7 @@
         <script>
                 let storedText = document.getElementById("results");
                 if (sessionStorage.getItem("file")) {
-                storedText.value = sessionStorage.getItem("file");
+                storedText.value = JSON.parse(sessionStorage.getItem("file"));
                 }
         </script>
 </body>
