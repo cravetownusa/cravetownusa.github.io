@@ -26,7 +26,9 @@
         }
 
         let storedText = document.getElementById("results");
-        storedText.value = sessionStorage.getItem("file");
+        if (sessionStorage.getItem("file")) {
+              storedText.value = sessionStorage.getItem("file");
+        }
 
         var counter = 0;
         if (getTimeStamp() === true) {
