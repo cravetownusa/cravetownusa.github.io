@@ -24,11 +24,6 @@
                 savedText = JSON.stringify(savedText);
                 sessionStorage.setItem("file", savedText);
         }
-
-        let storedText = document.getElementById("results");
-        if (sessionStorage.getItem("file")) {
-                storedText.value = sessionStorage.getItem("file");
-        }
         
         var counter = 0;
         if (getTimeStamp() === true) {
@@ -57,4 +52,10 @@
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
     </form>
+        <script>
+                let storedText = document.getElementById("results");
+                if (sessionStorage.getItem("file")) {
+                storedText.value = sessionStorage.getItem("file");
+                }
+        </script>
 </body>
