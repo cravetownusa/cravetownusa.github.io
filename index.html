@@ -8,7 +8,6 @@
             const prevText = localStorage.getItem("file");
             document.getElementById("results").value = JSON.parse(prevtext);
         }
-        window.onload = loadText();
         
         function getTimeStamp() {
                 var now = new Date();
@@ -57,5 +56,10 @@
         <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
+        
     </form>
+    <script>
+        window.onload = loadText();
+            
+    </script>
 </body>
