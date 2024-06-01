@@ -3,13 +3,7 @@
     <title>Cravetown, USA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-    <script> 
-        
-        function loadText() {
-                document.getElementById("results").value = JSON.parse(localStorage.getItem("file"));
-        }
-        window.onload = loadText();
-        
+    <script>
         function getTimeStamp() {
                 var now = new Date();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
@@ -30,6 +24,8 @@
             savedText = JSON.stringify(savedText);
             return localStorage.setItem("file", savedText);
         }
+
+        document.getElementById("results").value = JSON.parse(localStorage.getItem("file"));
 
         var counter = 0;
         if (getTimeStamp() === true) {
