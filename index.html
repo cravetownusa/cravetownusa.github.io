@@ -22,11 +22,11 @@
         function saveResults() {
             const savedText = document.getElementById("results").value;
             savedText = JSON.stringify(savedText);
-            return sessionStorage.setItem("file", savedText);
+            sessionStorage.setItem("file", savedText);
         }
 
-        const storedText = sessionStorage.getItem("file");
-        document.getElementById("results").value = storedText;
+        const storedText = document.getElementById("results").value
+        storedText = sessionStorage.getItem("file");
 
         var counter = 0;
         if (getTimeStamp() === true) {
