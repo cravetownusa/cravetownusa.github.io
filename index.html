@@ -20,15 +20,15 @@
         }
 
         function saveResults() {
-            let savedText = document.getElementById("results").value;
-            savedText = JSON.stringify(savedText);
-            sessionStorage.setItem("file", savedText);
+                let savedText = document.getElementById("results").value;
+                savedText = JSON.stringify(savedText);
+                sessionStorage.setItem("file", savedText);
         }
 
         let storedText = document.getElementById("results");
-            if (sessionStorage.getItem("file")) {
-              storedText.value = sessionStorage.getItem("file");
-            }
+        if (sessionStorage.getItem("file")) {
+                storedText.value = sessionStorage.getItem("file");
+        }
         
         var counter = 0;
         if (getTimeStamp() === true) {
