@@ -35,27 +35,35 @@
         
     </script>
 </head>
-<body>
-    <h1>Cravetown</h1>
-    <image src="IMG_5009.gif" height="100px" width="100px" />
-    <br><br><br>
-    <form name="timeForm">
-        <div class="buttons">
-            <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
-            <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
-        </div>
-        <br><br>
-        <h3>Your Results</h3>
-        <textarea name="dayCount" id="daily" rows="1" cols="1" style="font-weight: bold;">0</textarea>
-        <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
-        <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
-        <p>Today: </p>
-        <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
-    </form>
-        <script>
-                let storedText = document.getElementById("results");
-                if (sessionStorage.getItem("file")) {
-                storedText.value = JSON.parse(sessionStorage.getItem("file"));
-                }
-        </script>
+<body style="display:flex;flex-direction:row;">
+    
+    <div class="left-panel">
+        <h1>Cravetown</h1>
+        <image src="IMG_5009.gif" height="100px" width="100px" />
+        <br><br><br>
+        <form name="timeForm">
+            <div class="buttons">
+                <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
+                <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
+            </div>
+            <br><br>
+            <h3>Your Results</h3>
+            <textarea name="dayCount" id="daily" rows="1" cols="1" style="font-weight: bold;">0</textarea>
+            <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
+            <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
+            <p>Today: </p>
+            <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
+        </form>
+            <script>
+                    let storedText = document.getElementById("results");
+                    if (sessionStorage.getItem("file")) {
+                    storedText.value = JSON.parse(sessionStorage.getItem("file"));
+                    }
+            </script>
+    </div>
+    
+    <div class="right-panel">
+        <image src="IMG_5040.gif" width="300px" height="300px" />
+    </div>
+    
 </body>
