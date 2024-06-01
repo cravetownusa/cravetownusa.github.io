@@ -50,7 +50,10 @@
                             counter+= 1;
                             }
                     }
-                    document.getElementById("daily").innerHTML = counter;
+                    if (clearText()) {
+                        counter=0;
+                    }
+                    document.getElementById("daily").innerHTML = JSON.stringify(counter);
                 </script>
             <p id="daily">0</p>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
