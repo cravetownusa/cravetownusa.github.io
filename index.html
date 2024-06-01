@@ -6,7 +6,7 @@
     <script>
         function loadText() {
             const prevText = localStorage.getItem("file");
-            document.forms.timeField.value = JSON.parse(prevText);
+            document.getElementById("results").value = JSON.parse(prevtext);
         }
         window.onload = loadText();
         
@@ -28,7 +28,7 @@
         function saveResults() {
             const savedText = document.getElementById("results").value;
             savedText = JSON.stringify(savedText);
-            localStorage.setItem("file", savedText);
+            return localStorage.setItem("file", savedText);
         }
 
         var counter = 0;
