@@ -25,13 +25,6 @@
                 sessionStorage.setItem("file", savedText);
         }
         
-        var counter = 0;
-        if (getTimeStamp() === true) {
-                counter+=1;
-                const daily = document.getElementById("daily");
-                daily.value = " ";
-                daily.value = counter;       
-        }
         
     </script>
 </head>
@@ -49,7 +42,7 @@
             <br><br>
             <image src="IMG_5009.gif" width="100px" height="100px" />
             <h3>Your Results</h3>
-            <textarea name="dayCount" id="daily" rows="1" cols="1" style="font-weight: bold;">0</textarea>
+            <p id="daily">0</p>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
             <p>Today: </p>
@@ -59,6 +52,16 @@
                     let storedText = document.getElementById("results");
                     if (sessionStorage.getItem("file")) {
                     storedText.value = JSON.parse(sessionStorage.getItem("file"));
+                    }
+
+                    let counter = 0;
+                    if (getTimeStamp()) {
+                        counter+=1;
+                    }
+                    const daily = document.getElementById("daily");
+                    daily.innerHTML = counter;
+                    if (clearText()) {
+                        counter = 0;
                     }
             </script>
     </div>
