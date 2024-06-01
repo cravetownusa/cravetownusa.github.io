@@ -45,10 +45,9 @@
                 <script>
                     let counter = 0;
                     let rawText = sessionStorage.getItem("file")
-                    let stringText = JSON.parse(rawText);
-                    for (let i = 0; i < stringText.length; i++) {
+                    for (let i = 0; i < rawText.length; i++) {
                             if (stringText.charAt(i) === 'G') {
-                            counter+= 1
+                            counter+= 1;
                             }
                     }
                     document.getElementById("daily").innerHTML = counter;
