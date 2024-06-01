@@ -16,16 +16,16 @@
         }
 
         function clearText() {
-                return localStorage.clear();
+                return sessionStorage.clear();
         }
 
         function saveResults() {
             const savedText = document.getElementById("results").value;
             savedText = JSON.stringify(savedText);
-            return localStorage.setItem("file", savedText);
+            return sessionStorage.setItem("file", savedText);
         }
 
-        const storedText = JSON.parse(localStorage.getItem("file"));
+        const storedText = JSON.parse(sessionStorage.getItem("file"));
         document.getElementById("results").value = storedText;
 
         var counter = 0;
