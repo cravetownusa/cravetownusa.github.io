@@ -25,7 +25,8 @@
             return localStorage.setItem("file", savedText);
         }
 
-        document.getElementById("results").value = JSON.parse(localStorage.getItem("file"));
+        const storedText = JSON.parse(localStorage.getItem("file"));
+        document.getElementById("results").value = storedText;
 
         var counter = 0;
         if (getTimeStamp() === true) {
