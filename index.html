@@ -51,16 +51,15 @@
         <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
-        
-    </form>
-    <script>
+        <script>
         function loadText() {
             var prevText = localStorage.getItem("file");
             prevText = JSON.parse(prevtext);
-            document.getElementById("results").value = prevText;
+            this.form.timeField.value = prevText;
         }
         
         window.onload = loadText();
             
-    </script>
+        </script>
+    </form>
 </body>
