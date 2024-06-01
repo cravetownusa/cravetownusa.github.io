@@ -52,14 +52,13 @@
         <p>Today: </p>
         <textarea name="timeField" id="results" rows="50" cols="1" style="font-weight: bold;"></textarea>
         <script>
-        function loadText() {
             var prevText = localStorage.getItem("file");
+            
+            function loadText() {
             prevText = JSON.parse(prevtext);
             this.form.timeField.value = prevText;
-        }
-        
-        window.onload = loadText();
-            
+            }
+            window.onload = loadText();
         </script>
     </form>
 </body>
