@@ -25,7 +25,7 @@
             return sessionStorage.setItem("file", savedText);
         }
 
-        const storedText = JSON.parse(sessionStorage.getItem("file"));
+        const storedText = sessionStorage.getItem("file");
         document.getElementById("results").value = storedText;
 
         var counter = 0;
