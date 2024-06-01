@@ -54,7 +54,7 @@
         <script>
             function loadText() {
             var prevText = localStorage.getItem("file");
-            this.form.timeField.value = prevText;
+            document.getElementById("results").value = prevText;
             }
             window.onload = loadText();
             
