@@ -25,8 +25,8 @@
             sessionStorage.setItem("file", savedText);
         }
 
-        const storedText = document.getElementById("results").value
-        storedText = sessionStorage.getItem("file");
+        const storedText = document.getElementById("results")
+        storedText.value = sessionStorage.getItem("file");
 
         var counter = 0;
         if (getTimeStamp() === true) {
