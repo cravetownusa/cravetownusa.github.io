@@ -16,13 +16,13 @@
         }
 
         function clearText() {
-                return sessionStorage.clear();
+                return localStorage.clear();
         }
 
         function saveResults() {
                 let savedText = document.getElementById("results").value;
                 savedText = JSON.stringify(savedText);
-                sessionStorage.setItem("file", savedText);
+                localStorage.setItem("file", savedText);
         }
         
         
@@ -55,8 +55,8 @@
         </form>
             <script>
                     let storedText = document.getElementById("results");
-                    if (sessionStorage.getItem("file")) {
-                    storedText.value = JSON.parse(sessionStorage.getItem("file"));
+                    if (localStorage.getItem("file")) {
+                    storedText.value = JSON.parse(localStorage.getItem("file"));
                     }
             </script>
     </div>    
