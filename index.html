@@ -4,8 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
+        var counter = 0;
+        
         function getTimeStamp() {
                 var now = new Date();
+                counter+= 1
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
@@ -43,8 +46,6 @@
             <image src="IMG_5009.gif" width="100px" height="100px" />
             <h3>Your Results</h3>
                 <script>
-                    let counter = 0;
-                    counter+=1;
                     document.getElementById("daily").innerHTML = JSON.stringify(counter);
                 </script>
             <p id="daily"></p>
