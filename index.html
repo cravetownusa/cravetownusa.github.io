@@ -6,14 +6,13 @@
     <script>
         var counter = 0;
         
-        function printCount() {
+        function addCounter() {
             counter+=1;
             return counter;
         }
 
         function getTimeStamp() {
                 var now = new Date();
-                printCount();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
@@ -48,6 +47,9 @@
                 <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
                 <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
                 <script>
+                    document.getElementById("cave").addEventListener("click", function {
+                        document.getElementById("daily").value = addCounter();
+                    });
                 </script>
             </div>
             <br><br>
@@ -55,8 +57,6 @@
             <h3>Your Results</h3> 
             <textInput type="number" id="daily"></textInput>
                 <script>
-                    document.getElementById("cave").addEventListener("click", printCount);
-                    document.getElementById("daily").value += counter;
                 </script>
             <br><br>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
