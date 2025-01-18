@@ -13,6 +13,7 @@
 
         function getTimeStamp() {
                 var now = new Date();
+                printCount();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
                              + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
                              .getSeconds()) : (now.getSeconds())) + " \n");
@@ -52,7 +53,6 @@
             <p id="daily"></p>
                 <script>
                     document.getElementById("daily").innerText = JSON.stringify(counter);
-                    document.getElementById("crave").addEventListener("click", printCount);
                 </script>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
