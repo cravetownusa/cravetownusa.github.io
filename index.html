@@ -41,7 +41,7 @@
                 <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
                 <script>
                     document.getElementById("cave").addEventListener('click', function {
-                        let daily = getElementById("daily");
+                        let daily = document.getElementById("daily");
                         let currentValue = parseInt(daily.value);
                         daily.value += 1;
                     });
@@ -50,7 +50,7 @@
             <br><br>
             <image src="IMG_5009.gif" width="100px" height="100px" />
             <h3>Your Results</h3> 
-            <input type="text" id="daily" value="0" style="border:none;font-size:18;font-weight:bold"></input>
+            <input type="text" id="daily" value="0" style="border:none;font-size:42;font-weight:bold"></input>
             <br><br>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
