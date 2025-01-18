@@ -33,6 +33,8 @@
                 savedText = JSON.stringify(savedText);
                 localStorage.setItem("file", savedText);
         }
+
+        document.getElementById("daily").value = printCount();
                        
     </script>
 </head>
@@ -50,9 +52,9 @@
             <br><br>
             <image src="IMG_5009.gif" width="100px" height="100px" />
             <h3>Your Results</h3> 
-            <p id="daily"></p>
+            <textInput type="number" id="daily"></textInput>
                 <script>
-                    document.getElementById("daily").innerText = JSON.stringify(counter);
+                    // document.getElementById("daily").innerText = JSON.stringify(counter);
                 </script>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
