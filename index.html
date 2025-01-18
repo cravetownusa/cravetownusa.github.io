@@ -34,7 +34,6 @@
                 localStorage.setItem("file", savedText);
         }
 
-        document.getElementById("daily").innerText += counter;
                        
     </script>
 </head>
@@ -48,13 +47,16 @@
             <div class="buttons">
                 <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
                 <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
+                <script>
+                    document.getElementById("cave").addEventListener("click", printCount);
+                </script>
             </div>
             <br><br>
             <image src="IMG_5009.gif" width="100px" height="100px" />
             <h3>Your Results</h3> 
             <textInput type="number" id="daily"></textInput>
                 <script>
-                    // document.getElementById("daily").innerText = JSON.stringify(counter);
+                    document.getElementById("daily").innerText += counter;
                 </script>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
