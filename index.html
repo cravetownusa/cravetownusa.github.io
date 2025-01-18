@@ -48,7 +48,6 @@
                 <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
                 <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
                 <script>
-                    document.getElementById("cave").addEventListener("click", printCount);
                 </script>
             </div>
             <br><br>
@@ -56,8 +55,10 @@
             <h3>Your Results</h3> 
             <textInput type="number" id="daily"></textInput>
                 <script>
+                    document.getElementById("cave").addEventListener("click", printCount);
                     document.getElementById("daily").innerText += counter;
                 </script>
+            <br>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
             <button id="save" onclick="this.form.timeField.value=saveResults()">Save</button>
             <p>Today: </p>
