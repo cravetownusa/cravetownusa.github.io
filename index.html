@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
-        var counter = 0;
+        let counter = 0;
         
         function addCounter() {
             counter+=1;
@@ -55,9 +55,9 @@
             <br><br>
             <image src="IMG_5009.gif" width="100px" height="100px" />
             <h3>Your Results</h3> 
-            <textInput type="number" id="daily"></textInput>
+            <textInput name="daily" type="number" id="daily"></textInput>
                 <script>
-                    document.getElementById("daily").value+=counter;
+                    this.form.daily.value = counter;
                 </script>
             <br><br>
             <button id="clear" onclick="this.form.timeField.value=clearText()">Clear</button>
