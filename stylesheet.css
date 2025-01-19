@@ -14,7 +14,7 @@
 
 #cave, #crave {
   --r: 50px; /* border radius */
-  width: 250px;
+  width: 200px;
   aspect-ratio: 1/cos(30deg);
   --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
   mask:
