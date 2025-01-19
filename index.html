@@ -28,11 +28,14 @@
 
         function saveResults() {
                 let savedText = document.getElementById("results").value;
-                let savedCount = document.getElementById("daily").value
+                let savedCount = document.getElementById("daily").value;
+                let savedBar = width;
                 savedText = JSON.stringify(savedText);
                 savedCount = JSON.stringify(savedCount);
+                savedBar = JSON.stringify(savedBar);
                 localStorage.setItem("file", savedText);
                 localStorage.setItem("count", savedCount);
+                localStorage.setItem("bar", savedBar);
         }
 
                        
@@ -45,7 +48,7 @@
         <image src="IMG_5040.gif" height="300px" width="300px" />
         <br><br><br>
         <div id="progress">
-            <div id="bar"></div>
+            <div id="bar">${width}</div>
         </div>
         <br><br><br>
         <form name="timeForm" id="appform">
@@ -79,11 +82,15 @@
             <script>
                     let storedText = document.getElementById("results");
                     let storedCount = document.getElementById("daily");
+                    let storedBar = document.getElementById("bar");
                     if (localStorage.getItem("file")) {
                         storedText.value = JSON.parse(localStorage.getItem("file"));
                     }
                     if (localStorage.getItem("count")) {
                         storedCount.value = JSON.parse(localStorage.getItem("count"));
+                    }
+                    if (localStorage.getItem("bar")) {
+                        storedBar.style.width = parseInt(JSON.parse(localStorage.getItem("bar")));
                     }
             </script>
     </div>
