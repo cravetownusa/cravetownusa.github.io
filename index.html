@@ -32,7 +32,6 @@
                 let savedBar = width;
                 savedText = JSON.stringify(savedText);
                 savedCount = JSON.stringify(savedCount);
-                savedBar = JSON.stringify(savedBar);
                 localStorage.setItem("file", savedText);
                 localStorage.setItem("count", savedCount);
                 localStorage.setItem("bar", savedBar);
@@ -91,7 +90,7 @@
                         storedCount.value = JSON.parse(localStorage.getItem("count"));
                     }
                     if (localStorage.getItem("bar")) {
-                        storedBar.style.width = parseInt(JSON.parse(localStorage.getItem("bar")));
+                        storedBar.style.width = localStorage.getItem("bar");
                     }
             </script>
     </div>
