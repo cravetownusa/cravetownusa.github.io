@@ -41,8 +41,12 @@ button {
   color: black;
 }
 
-#results {
+form {
   width: 98vw;
+}
+
+#results {
+  width: 100%;
   border: none;
   font-family: courier;
 }
