@@ -11,12 +11,12 @@
   width: 100%;
 }
 
-#cave {
+#cave, #crave {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   border: 3px outset gainsboro;
   border-radius: 20px;
-  height: 100px;
-  width: 125px;
+  height: 200px;
+  width: 350px;
   padding: 1rem;
   background-color: lemonchiffon;
   color: orange;
@@ -27,14 +27,3 @@
   border: none;
   font-family: courier;
 }
-
-#crave {
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
-  border: 3px outset gainsboro;
-  border-radius: 20px;
-  height: 100px;
-  width: 125px;
-  padding: 1rem;
-  background-color: lemonchiffon;
-  color: orange;
-} 
