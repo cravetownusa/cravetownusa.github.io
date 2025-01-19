@@ -20,7 +20,11 @@
   padding: 1rem;
   background-color: lemonchiffon;
   color: orange;
-} 
+}
+
+#crave {
+  clip-path: polygon(0 0, 50% -100%, 100% 0);
+}
 
 #results {
   width: 50vw;
