@@ -49,6 +49,8 @@ button {
   width: 100%;
   border: none;
   font-family: courier;
+  margin: 0;
+  padding: 0;
 }
 
 #save, #clear {
