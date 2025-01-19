@@ -48,8 +48,9 @@
         <image src="IMG_5040.gif" height="300px" width="300px" />
         <br><br><br>
         <div id="progress">
-            <div id="bar">${width}</div>
+            <div id="bar" style="color:black;"></div>
         </div>
+        <script>document.getElementById("bar").innerHTML=width</script>
         <br><br><br>
         <form name="timeForm" id="appform">
             <div class="buttons">
