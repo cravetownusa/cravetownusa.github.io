@@ -29,12 +29,11 @@
         function saveResults() {
                 let savedText = document.getElementById("results").value;
                 let savedCount = document.getElementById("daily").value;
-                let savedBar = width;
                 savedText = JSON.stringify(savedText);
                 savedCount = JSON.stringify(savedCount);
                 localStorage.setItem("file", savedText);
                 localStorage.setItem("count", savedCount);
-                localStorage.setItem("bar", savedBar);
+                localStorage.setItem("bar", width);
         }
 
                        
