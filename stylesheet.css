@@ -34,6 +34,18 @@ body {
   background-color: dodgerblue;
 }
 
+#progress, #bar {
+  width: 75vw;
+  height: 25px;
+  border-radius: 50%;
+  background-color: gainsboro;
+}
+
+#bar {
+  background-color: #5f5;
+  width: 1vw;
+}
+  
 #daily {
   font-size: 72;
   width: 99vw;
