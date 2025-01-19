@@ -22,8 +22,11 @@
 
         function saveResults() {
                 let savedText = document.getElementById("results").value;
+                let savedCount = document.getElementById("daily").value
                 savedText = JSON.stringify(savedText);
+                savedCount = JSON.stringify(savedCount);
                 localStorage.setItem("file", savedText);
+                localStorage.setItem("count", savedCount);
         }
 
                        
@@ -43,7 +46,7 @@
                     document.getElementById("cave").addEventListener('click', ()=> {
                         let daily = document.getElementById("daily");
                         let currentValue = parseInt(daily.value);
-                        daily.value += "+1";
+                        daily.value = currentValue + 1;
                     });
                 </script>
             </div>
@@ -59,8 +62,12 @@
         </form>
             <script>
                     let storedText = document.getElementById("results");
+                    let storedCount = document.getElementById("daily");
                     if (localStorage.getItem("file")) {
-                    storedText.value = JSON.parse(localStorage.getItem("file"));
+                        storedText.value = JSON.parse(localStorage.getItem("file"));
+                    }
+                    if (localStorage.getItem("count")) {
+                        storedCount.value = JSON.parse(localStorage.getItem("count"));
                     }
             </script>
     </div>    
