@@ -22,12 +22,17 @@
   background-color: firebrick;
   color: gainsboro;
   font-weight: bold;
-  font-size: 18;
+  font-size: 32;
+  line-height: -2;
 }
 
 #crave {
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
   background-color: dodgerblue;
+}
+
+#daily {
+  font-size: 72;
 }
 
 button {
