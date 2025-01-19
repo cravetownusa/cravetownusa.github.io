@@ -47,6 +47,10 @@ button {
   font-family: courier;
 }
 
+#save, #clear {
+  font-size: 16;
+}
+
 #milestone25 {
   display: block;
   color: #5f5;
