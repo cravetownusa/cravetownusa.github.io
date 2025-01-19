@@ -44,5 +44,7 @@ button {
 }
 
 #milestone25 {
+  display: block;
   color: #0f0;
+  width: 100%;
 }
