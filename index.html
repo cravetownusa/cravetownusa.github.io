@@ -16,7 +16,8 @@
 
 
         function printSuccess() {
-               cravings += 1;
+               let currentCravings = parseInt(cravings);
+               cravings = currentCravings + 1;
                return ("/*(^u^)/* Great job resisting! /*(^u^)/*\n");
         }
 
@@ -33,7 +34,7 @@
                 localStorage.setItem("count", savedCount);
         }
 
-        milestone25.innerText = "Acievement: " + cravings + " Cravings Resisted";
+        milestone25.innerText = "Acievement: ${cravings} Cravings Resisted";
                        
     </script>
 </head>
