@@ -6,12 +6,14 @@
 
 body {
   width: 100vw;
+  margin: 0;
+  padding: 1vw;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 99vw;
   margin-bottom: 1rem;
   padding: 1rem;
 }
@@ -36,6 +38,7 @@ body {
 
 #daily {
   font-size: 72;
+  width: 99vw;
 }
 
 button {
@@ -46,11 +49,11 @@ button {
 }
 
 #appform {
-  width: 100vw;
+  width: 99vw;
 }
 
 #results {
-  width: 100vw;
+  width: 99vw;
   border: none;
   font-family: courier;
   margin: 0;
