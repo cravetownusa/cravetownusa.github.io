@@ -60,7 +60,8 @@
                     });
                     document.getElementById("crave").addEventListener('click', ()=> {
                         let bar = document.getElementById("bar");
-                        bar.style.width += 1;
+                        let width = bar.style.width
+                        bar.style.width = width + 1 + "vw";
                     });
                 </script>
             </div>
