@@ -41,8 +41,8 @@ button {
   color: black;
 }
 
-form {
-  width: 98vw;
+#appform {
+  width: 100%;
 }
 
 #results {
