@@ -6,6 +6,7 @@
     <script>
         let cravings = 0;
         let milestone25 = document.getElementById("milestone25");
+        milestone25.innerHTML = "Achievement: ${cravings} Cravings Resisted";
         
         function getTimeStamp() {
                 var now = new Date();
@@ -34,7 +35,6 @@
                 localStorage.setItem("count", savedCount);
         }
 
-        milestone25.innerHTML = "Achievement: ${cravings} Cravings Resisted";
                        
     </script>
 </head>
