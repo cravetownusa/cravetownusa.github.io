@@ -11,7 +11,7 @@ body {
 .buttons {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   margin-bottom: 1rem;
   padding: 1rem;
 }
@@ -46,11 +46,11 @@ button {
 }
 
 #appform {
-  width: 100%;
+  width: 100vw;
 }
 
 #results {
-  width: 100%;
+  width: 100vw;
   border: none;
   font-family: courier;
   margin: 0;
@@ -64,7 +64,6 @@ button {
 #milestone25 {
   display: block;
   color: #5f5;
-  width: 100%;
   font-weight: bold;
   font-size: 18;
 }
