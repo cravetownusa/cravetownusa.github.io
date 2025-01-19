@@ -48,9 +48,8 @@
         <image src="IMG_5040.gif" height="300px" width="300px" />
         <br><br><br>
         <div id="progress">
-            <div id="bar" style="color:black;"></div>
+            <div id="bar" style="color:black;align-text:center;"></div>
         </div>
-        <script>document.getElementById("bar").innerHTML=width</script>
         <br><br><br>
         <form name="timeForm" id="appform">
             <div class="buttons">
@@ -67,6 +66,7 @@
                         let bar = document.getElementById("bar");
                         width++;
                         bar.style.width = width + "vw";
+                        bar.innerHTML = width;
                     });
                 </script>
             </div>
