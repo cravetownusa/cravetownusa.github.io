@@ -10,13 +10,12 @@
   align-items: center;
   width: 100%;
   padding: 1rem;
-  border-radius: 25px;
 }
 
 #cave, #crave {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   border: 3px outset gainsboro;
-  border-radius: 20px;
+  border-radius: 25px;
   height: 200px;
   width: 250px;
   padding: 1rem;
@@ -26,6 +25,11 @@
 
 #crave {
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+button {
+  padding: 1.5rem;
+  border-radius: 25px;
 }
 
 #results {
