@@ -40,7 +40,7 @@
                 <button id="crave" type="button" onclick="this.form.timeField.value+=printSuccess()">Crave</button>
                 <button id="cave" type="button" onclick="this.form.timeField.value+=getTimeStamp()">Cave</button>
                 <script>
-                    document.getElementById("cave").addEventListener('click', function {
+                    document.getElementById("cave").addEventListener('click', ()=> {
                         let daily = document.getElementById("daily");
                         let currentValue = parseInt(daily.value);
                         daily.value += 1;
