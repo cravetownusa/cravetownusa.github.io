@@ -4,6 +4,9 @@
   color: white;
 }
 
+body {
+  width: 100vw;
+
 .buttons {
   display: flex;
   flex-direction: column;
