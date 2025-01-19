@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
+        let milestones = 0;
+        let cravings25 = getElementById("cravings25")
+        
         function getTimeStamp() {
                 var now = new Date();
                 return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
@@ -13,6 +16,7 @@
 
 
         function printSuccess() {
+               milestones += 1;
                return ("/*(^u^)/* Great job resisting! /*(^u^)/*\n");
         }
 
@@ -29,6 +33,9 @@
                 localStorage.setItem("count", savedCount);
         }
 
+        if (milestones>24) {
+            cravings25.style.display = block;
+        }
                        
     </script>
 </head>
@@ -37,6 +44,7 @@
     <div class="left-panel">
         <h1>Cravetown, USA</h1>
         <image src="IMG_5040.gif" height="300px" width="300px" />
+            <div id="cravings25" style="display:none;">Achievement: 25 Cravings Resisted</div>
         <br><br><br>
         <form name="timeForm">
             <div class="buttons">
