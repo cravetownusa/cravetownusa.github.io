@@ -19,8 +19,10 @@
   height: 200px;
   width: 250px;
   padding: 1rem;
-  background-color: brickred;
-  color: orange;
+  background-color: firebrick;
+  color: black;
+  font-weight: bold;
+  font-size: 18;
 }
 
 #crave {
@@ -32,6 +34,7 @@ button {
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 25px;
   background-color: lemonchiffon;
+  color: black;
 }
 
 #results {
