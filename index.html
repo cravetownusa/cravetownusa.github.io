@@ -62,6 +62,7 @@
                     });
                     document.getElementById("crave").addEventListener('click', ()=> {
                         let bar = document.getElementById("bar");
+                        width = Number(localStorage.getItem("bar"));
                         width++;
                         bar.style.width = width + "vw";
                         bar.innerHTML = width;
