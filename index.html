@@ -64,6 +64,9 @@
                     document.getElementById("crave").addEventListener('click', ()=> {
                         let bar = document.getElementById("bar");
                         width++;
+                        if (width>75) {
+                            width=0;
+                        }
                         bar.style.width = width + "vw";
                         bar.innerHTML = width;
                     });
