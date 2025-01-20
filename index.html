@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script>
         var width = 0;
+        width = Number(localStorage.getItem("bar"));
         let cravings = 0;
         let milestone25 = document.getElementById("milestone25");
         milestone25.innerHTML = "Achievement: ${cravings} Cravings Resisted";
@@ -62,7 +63,6 @@
                     });
                     document.getElementById("crave").addEventListener('click', ()=> {
                         let bar = document.getElementById("bar");
-                        width = Number(localStorage.getItem("bar"));
                         width++;
                         bar.style.width = width + "vw";
                         bar.innerHTML = width;
